@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="buttonLogin" type="button" role="button">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -87,15 +87,12 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-warning" type="button"
-                        data-toggle="modal" data-target="#reserve">
-                        <button type="button"  class="btn btn-warning btn-sm btn-block">Reserve Table</button>                
-                    </a>
+                    <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
-    <div id="reserve" class="modal fade" role="dialog">
+    <div id="reservationFormModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -350,6 +347,15 @@
 
             });
         });
+    </script>
+    <script>
+        $("#buttonLogin").click(function(){
+        $('#loginModal').modal('show');
+    });
+
+    $("#buttonReservation").click(function(){
+        $('#reservationFormModal').modal('show');
+    });
     </script>
 </body>
 
